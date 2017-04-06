@@ -17,3 +17,5 @@ else
     mv ~/.vimrc ~/.vimrc.backup
     cp .vimrc ~/
 fi
+
+vim +VundleInstall
