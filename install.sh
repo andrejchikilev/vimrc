@@ -18,4 +18,4 @@ else
     cp .vimrc ~/
 fi
 
-vim +VundleInstall
+vim +VundleInstall +qa!
