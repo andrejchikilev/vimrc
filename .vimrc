@@ -70,6 +70,19 @@ let g:airline_powerline_fonts = 1
 " => Plugins settings
 """""""""""""""""""""""""""""""""""""""
 
+"" EasyTags
+"=====================================
+" Путь для файла с тегами
+let g:easytags_file = '~/.vim/tags'
+
+" Отключаем автоподсветку тегов
+let g:easytags_auto_highlight = 0
+
+let g:easytags_events = ['BufWritePost']
+
+" Не блокировать Vim во время записи тегов
+let g:easytags_async = 1
+
 "" Python-mode settings
 "=====================================
 " отключаем автокомплит по коду (у нас вместо него используется jedi-vim)
@@ -112,6 +125,7 @@ let g:pymode_run = 0
 let g:jedi#popup_select_first = 1
 " Automatically close preview window upon leaving insert mode
 let g:jedi#auto_close_doc = 1
+
 
 """""""""""""""""""""""""""""""""""""""
 " => KeyBindings
@@ -193,6 +207,8 @@ Plugin 'vim-airline/vim-airline'        "Vim statusbar
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'rosenfeld/conque-term'      "Consoles as buffers
 Plugin 'joonty/vdebug'                  "Debugger client for Vim
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-easytags'
 "Plugin 'vim-scripts/Conque-GDB'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
