@@ -3,7 +3,7 @@
 "	Andrej Chikilev
 "	andrej.chikilev@gmail.com
 "
-"Version 1.0 - 20/05/16
+"Version 1.1 - 26/02/18
 "
 "
 "
@@ -209,6 +209,7 @@ Plugin 'rosenfeld/conque-term'      "Consoles as buffers
 Plugin 'joonty/vdebug'                  "Debugger client for Vim
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
+Plugin 'MattesGroeger/vim-bookmarks' 
 "Plugin 'vim-scripts/Conque-GDB'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
