@@ -32,11 +32,28 @@ set history=700
 set autoread
 
 " количество символов пробела, которые будут заменять \t
-set tabstop=8
+set tabstop=4
 set expandtab
 set shiftwidth=4
 set softtabstop=4
 set smarttab
+
+" Автоизменение длины табуляции от типа файла
+if has("autocmd")
+    filetype on
+    autocmd FileType python setlocal ts=4 sts=4 sw=4 et
+    autocmd FileType javascript setlocal ts=4 sts=4 sw=4 et
+    autocmd FileType html setlocal ts=2 sts=2 sw=2 et
+    autocmd FileType htmldjango setlocal ts=2 sts=2 sw=2 et
+    autocmd FileType xhtml setlocal ts=2 sts=2 sw=2 et
+    autocmd FileType xml setlocal ts=2 sts=2 sw=2 et
+    autocmd FileType css setlocal ts=2 sts=2 sw=2 et
+    autocmd FileType vim setlocal ts=4 sts=4 sw=4 et
+    autocmd FileType apache setlocal ts=2 sts=2 sw=2 et
+    autocmd FileType yaml setlocal ts=2 sts=2 sw=2 et
+
+    autocmd BufNewFile,BufRead *.tmpl,*.tpl setfiletype html
+endif
 
 " автозамена
 set et 
@@ -226,6 +243,9 @@ Plugin 'davidhalter/jedi-vim'           "Jedi-vim autocomplete plugin
 Plugin 'mitsuhiko/vim-jinja'            "Jinja support for vim
 Plugin 'mitsuhiko/vim-python-combined'  "Combined Python 2/3 for Vim
 Plugin 'fs111/pydoc.vim'
+
+"" --- CSS ---
+Plugin 'mtscout6/vim-tagbar-css'
 call vundle#end()
 filetype plugin indent on
 

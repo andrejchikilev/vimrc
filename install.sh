@@ -20,4 +20,10 @@ else
     cp .vimrc ~/
 fi
 
+if ! [ -f ~/.ctags ]; then
+    cp .ctags ~/
+else
+    mv ~/.ctags ~/.ctags.backup
+    cp .ctags ~/
+fi
 vim +VundleInstall +qa!
